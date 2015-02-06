@@ -1,12 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.mycompany.ThyssenTest" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ThyssenTest</name>
-    <description>
-        A sample Apache Cordova application that responds to the deviceready event.
-    </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
-    </author>
-    <content src="index.html" />
-    <access origin="*" />
+<widget id="de.abat.sapui5_hybrid" version="0.0.1"
+	xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"
+	xmlns:gap="http://phonegap.com/ns/1.0>
+	<name>SAPUI5_Hybrid</name>
+	<description>
+		A sample Apache Cordova application including SAPUI5 and
+		native plugins.
+	</description>
+	<author email="
+	jam @ abat.de " href="http://www.abat.de">
+	abat AG
+</author>
+	<content src="index.html" />
+	<access origin="*" />
+	<gap:plugin name="org.apache.cordova.device" />
+	<gap:plugin name="org.apache.cordova.camera" />
+	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
 </widget>
