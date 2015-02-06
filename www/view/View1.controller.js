@@ -36,10 +36,18 @@ sap.ui.controller("view.View1", {
 //	}
 
 loadBarcodeScanner: function(){
-    var app = sap.ui.getCore().byId("idMyApp");
-    var view = sap.ui.getCore().byId("idBarcodeScanner");
-    
-    app.to(view);
+    cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );
+	},
 },
 
 loadCamera: function(){
@@ -57,10 +65,9 @@ loadLookAndFeel: function(){
 },
 
 loadUniqueID:  function(){
-    var app = sap.ui.getCore().byId("idMyApp");
-    var view = sap.ui.getCore().byId("idUniqueID");
-    
-    app.to(view);
+    onAfterRendering: function() {
+	    alert(device.uuid);
+	},
 }
 
 
