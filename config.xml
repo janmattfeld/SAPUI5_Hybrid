@@ -7,7 +7,7 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>SAPUI5 Hybrid</name>
+    <name>SAPUI5 Hybrid Demo</name>
 
     <description>
         An example SAPUI5 Hybrid App.
