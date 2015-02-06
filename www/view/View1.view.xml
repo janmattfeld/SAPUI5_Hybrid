@@ -1,0 +1,29 @@
+<sap.ui.core.mvc:View controllerName="view.View1"
+    xmlns="sap.m"
+    xmlns:sap.ui.layout="sap.ui.layout"
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+    <Page title="Main">
+        <content>
+            <sap.ui.layout:VerticalLayout id="layout0" width="100%">
+                <sap.ui.layout:content>
+                    <Button id="button0" press="loadBarcodeScanner" text="Barcode Scanner" width="100%"></Button>
+                </sap.ui.layout:content>
+            </sap.ui.layout:VerticalLayout>
+            <sap.ui.layout:VerticalLayout id="layout1" width="100%">
+                <sap.ui.layout:content>
+                    <Button id="button1" press="loadCamera" text="Camera" width="100%"></Button>
+                </sap.ui.layout:content>
+            </sap.ui.layout:VerticalLayout>
+            <sap.ui.layout:VerticalLayout id="layout2" width="100%">
+                <sap.ui.layout:content>
+                    <Button id="button2" press="loadLookAndFeel" text="LookAndFeel" width="100%"></Button>
+                </sap.ui.layout:content>
+            </sap.ui.layout:VerticalLayout>
+            <sap.ui.layout:VerticalLayout id="layout3" width="100%">
+                <sap.ui.layout:content>
+                    <Button id="button3" press="loadUniqueID" text="UniqueID" width="100%"></Button>
+                </sap.ui.layout:content>
+            </sap.ui.layout:VerticalLayout>
+        </content>
+    </Page>
+</sap.ui.core.mvc:View>
