@@ -61,11 +61,9 @@
                 
 				var app = new sap.m.App("idMyApp", {initialPage:"idView1"});
 				var page = sap.ui.view({id:"idView1", viewName:"view.View1", type:sap.ui.core.mvc.ViewType.XML});
-				var pageBarcodeScanner = sap.ui.view({id:"idBarcodeScanner", viewName:"view.BarcodeScanner", type:sap.ui.core.mvc.ViewType.XML});
 				var pageCamera = sap.ui.view({id:"idCamera", viewName:"view.Camera", type:sap.ui.core.mvc.ViewType.XML});
 				var pageLookAndFeel = sap.ui.view({id:"idLookAndFeel", viewName:"view.LookAndFeel", type:sap.ui.core.mvc.ViewType.XML});
-				var pageUniqueID = sap.ui.view({id:"idUniqueID", viewName:"view.UniqueID", type:sap.ui.core.mvc.ViewType.XML});
-				app.addPage(page).addPage(pageBarcodeScanner).addPage(pageCamera).addPage(pageLookAndFeel).addPage(pageUniqueID);
+				app.addPage(page).addPage(pageCamera).addPage(pageLookAndFeel);
 				app.placeAt("content");
 		
 				}
