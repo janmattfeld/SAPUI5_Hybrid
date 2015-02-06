@@ -1,0 +1,5 @@
+<sap.ui.core.mvc:View controllerName="view.UniqueID"
+    xmlns="sap.m"
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+    <Page title="Unique ID" showNavButton="true" navButtonPress="onNavBack"></Page>
+</sap.ui.core.mvc:View>

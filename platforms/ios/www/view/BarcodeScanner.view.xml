@@ -1,0 +1,26 @@
+<sap.ui.core.mvc:View controllerName="view.BarcodeScanner"
+    xmlns="sap.m"
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+    <Page title="Camera" showNavButton="true" navButtonPress="onNavBack"> 
+        <content>
+            <VBox id="vbox0" width="100%" direction="Column">
+                <items>
+                    <Button id="button0" press="scan" text="Scan" width="100%">
+                        <layoutData>
+                            <FlexItemData alignSelf="Stretch"></FlexItemData>
+                        </layoutData>
+                    </Button>
+                </items>
+            </VBox>
+            <VBox id="vbox1" width="100%" direction="Column">
+                <items>
+                    <Button id="button1" press="encode" text="Encode" width="100%">
+                        <layoutData>
+                            <FlexItemData alignSelf="Stretch"></FlexItemData>
+                        </layoutData>
+                    </Button>
+                </items>
+            </VBox>
+        </content>
+    </Page>
+</sap.ui.core.mvc:View>
