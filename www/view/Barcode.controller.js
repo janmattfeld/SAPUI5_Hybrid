@@ -1,8 +1,7 @@
-sap.ui.controller("view.Camera", {
+sap.ui.controller("view.Barcode", {
 
 app: null,
 view: null,
-src: null,
 text: null,
 
 	onInit: function() {
@@ -12,13 +11,12 @@ text: null,
         //set Model as JSONModel
         var oModel = new sap.ui.model.json.JSONModel();
         
-        //take a Photo with the camera
-        this.takePhoto();
+        //get a Barcode with the cam
+        this.getBarcode();
         
         //set Data to the JSONModel
         oModel.setData({
-            idImageSrc: this.src,
-            idText: this.text
+            idBarcode: this.text
         });
         
         //set View
@@ -28,20 +26,16 @@ text: null,
         this.view.setModel(oModel);
 	},
 	
-	//take a photo
-	takePhoto: function() {
-	    navigator.camera.getPicture(onSuccess, onFail, {
-			quality : 50,
-			destinationType : Camera.DestinationType.DATA_URL
-		});
-		
-		function onSuccess(imageData) {
-			this.src = "data:image/jpeg;base64," + imageData;
-		}
-		
-		function onFail(message) {
-			this.text = message;
-		}
+	//get Barcode
+	getBarcode: function() {
+	    cordova.plugins.barcodeScanner.scan(
+            function (result) {
+                this.text = result.text; 
+            }, 
+            function (error) {
+                this.text = error;
+            }
+        );
 	},
 	
 	//Navigate back

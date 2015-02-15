@@ -50,26 +50,21 @@
 					return false;
 				} 
 			
-			
 				sap.ui.localResources("view");
-				var app = new sap.m.App({initialPage:"idView1"});
-			
 				
 				function startApp(context) {
-		             
-		        sap.ui.localResources("view");
-                
-				var app = new sap.m.App("idMyApp", {initialPage:"idView1"});
-				var page = sap.ui.view({id:"idView1", viewName:"view.View1", type:sap.ui.core.mvc.ViewType.XML});
-				var pageCamera = sap.ui.view({id:"idCamera", viewName:"view.Camera", type:sap.ui.core.mvc.ViewType.XML});
-				var pageLookAndFeel = sap.ui.view({id:"idLookAndFeel", viewName:"view.LookAndFeel", type:sap.ui.core.mvc.ViewType.XML});
-				app.addPage(page).addPage(pageCamera).addPage(pageLookAndFeel);
-				app.placeAt("content");
+				    
+				    var app = new sap.m.App("idMyApp", {initialPage:"idMain"});
+					var page = sap.ui.view({id:"idMain", viewName:"view.Main", type:sap.ui.core.mvc.ViewType.XML  });
+					var pageCamera = sap.ui.view({id:"idCamera", viewName:"view.Camera", type:sap.ui.core.mvc.ViewType.XML});
+					var pageBarcode = sap.ui.view({id:"idBarcode", viewName:"view.Barcode", type:sap.ui.core.mvc.ViewType.XML});
+					var pageId = sap.ui.view({id:"idId", viewName:"view.Id", type:sap.ui.core.mvc.ViewType.XML});
+					var pageExplore = sap.ui.view({id:"idExplore", viewName:"view.Explore", type:sap.ui.core.mvc.ViewType.XML});
+					app.addPage(page).addPage(pageCamera).addPage(pageBarcode).addPage(pageId).addPage(pageExplore);
+					app.placeAt("content");
 		
 				}
-				
 				startApp();
-				
 		}, false);
 		</script>
 		
