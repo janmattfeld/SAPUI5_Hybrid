@@ -14,7 +14,7 @@ uuid: null,
         var oModel = new sap.ui.model.json.JSONModel();
         
         oModel.setData({
-            idAppId: this.uuid
+            idAppId: device.uuid
         });
         
         this.view = this.getView();
