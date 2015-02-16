@@ -34,14 +34,14 @@ text: null,
 	    cordova.plugins.barcodeScanner.scan(
             function (result) {
 				//set Data to the JSONModel
-				var oModel = this.getView().getModel();
+				var oModel = this.view.getModel();
 				oModel.setData({
 					idBarcode: result.text
 				});
             }, 
             function (error) {
 				//set Data to the JSONModel
-				var oModel = this.getView().getModel();
+				var oModel = this.view.getModel();
 				oModel.setData({
 					idBarcode: error
 				});
