@@ -16,12 +16,9 @@ text: null,
         
         //set Model as JSONModel
         var oModel = new sap.ui.model.json.JSONModel();
-		
-		//set View
-        this.view = this.getView();
         
         //Set JSONModel to the View
-        this.view.setModel(oModel);
+        sap.ui.getCore().setModel(oModel);
 	},
 		
 	onBeforeShow: function() {        
@@ -34,14 +31,14 @@ text: null,
 	    cordova.plugins.barcodeScanner.scan(
             function (result) {
 				//set Data to the JSONModel
-				var oModel = this.view.getModel();
+				var oModel = sap.ui.getCore().getModel();
 				oModel.setData({
 					idBarcode: result.text
 				});
             }, 
             function (error) {
 				//set Data to the JSONModel
-				var oModel = this.view.getModel();
+				var oModel = sap.ui.getCore().getModel();
 				oModel.setData({
 					idBarcode: error
 				});
