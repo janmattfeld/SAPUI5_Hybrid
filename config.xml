@@ -7,7 +7,7 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>SAPUI5 Hybrid Demo</name>
+    <name>SAPUI5 Hybrid</name>
 
     <description>
         An example SAPUI5 Hybrid App.
@@ -17,6 +17,8 @@
         abat AG
     </author>
 
+	<icon src="./img/114_iPhone-Retina_Web_Clip.png" />
+	
 	<gap:plugin name="org.apache.cordova.device" />
 	<gap:plugin name="org.apache.cordova.camera" />
 	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
