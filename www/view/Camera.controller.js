@@ -5,7 +5,7 @@ view: null,
 src: null,
 text: null,
 
-	onInit: function() {
+	onBeforeShow: function() {
 	    // Set app
         this.app = sap.ui.getCore().byId("idMyApp");
         
