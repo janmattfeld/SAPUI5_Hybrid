@@ -19,12 +19,6 @@ text: null,
 	onBeforeShow: function() {
         //take a Photo with the camera
         this.takePhoto();
-        
-        //set Data to the JSONModel
-        oModel.setData({
-            idImageSrc: this.src,
-            idText: this.text
-        });
 	},
 	
 	//take a photo
