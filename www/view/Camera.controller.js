@@ -6,20 +6,17 @@ src: null,
 text: null,
 
 	onInit: function() { 
-	//to register for beforeShow event 
+		//to register for beforeShow event 
 		this.getView().addEventDelegate({
 			// not added the controller as delegate to avoid controller functions with similar names as the events 
 			onBeforeShow : jQuery.proxy(function(evt) { this.onBeforeShow(evt); }, this) 
 		}); 
+	
+	    // Set app
+        this.app = sap.ui.getCore().byId("idMyApp");
 	},
 
 	onBeforeShow: function() {
-	    // Set app
-        this.app = sap.ui.getCore().byId("idMyApp");
-        
-        //set Model as JSONModel
-        var oModel = new sap.ui.model.json.JSONModel();
-        
         //take a Photo with the camera
         this.takePhoto();
         
@@ -28,12 +25,6 @@ text: null,
             idImageSrc: this.src,
             idText: this.text
         });
-        
-        //set View
-        this.view = this.getView();
-        
-        //Set JSONModel to the View
-        this.view.setModel(oModel);
 	},
 	
 	//take a photo
@@ -44,11 +35,19 @@ text: null,
 		});
 		
 		function onSuccess(imageData) {
-			this.src = "data:image/jpeg;base64," + imageData;
+			var oModel = sap.ui.getCore().getModel();
+			oModel.setData({
+				idImageSrc: "data:image/jpeg;base64," + imageData,
+				idText: null
+			});
 		}
 		
-		function onFail(message) {
-			this.text = message;
+		function onFail(message) {			
+			var oModel = sap.ui.getCore().getModel();
+			oModel.setData({
+				idImageSrc: null,
+				idText: message
+			});
 		}
 	},
 	

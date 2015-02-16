@@ -10,6 +10,12 @@ view: null,
 */
 	onInit: function() {
         this.app = sap.ui.getCore().byId("idMyApp");
+	        
+        //set Model as JSONModel
+        var oModel = new sap.ui.model.json.JSONModel();
+        
+        //Set JSONModel to the Core
+        sap.ui.getCore().setModel(oModel);	
 	},
 
 /**

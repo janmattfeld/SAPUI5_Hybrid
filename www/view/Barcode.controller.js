@@ -13,12 +13,6 @@ text: null,
 	
 		// Set app
         this.app = sap.ui.getCore().byId("idMyApp");
-        
-        //set Model as JSONModel
-        var oModel = new sap.ui.model.json.JSONModel();
-        
-        //Set JSONModel to the View
-        sap.ui.getCore().setModel(oModel);
 	},
 		
 	onBeforeShow: function() {        
@@ -50,5 +44,4 @@ text: null,
 	onNavBack: function() {
         this.app.back();
     }
-
 });
