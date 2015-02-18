@@ -21,6 +21,8 @@
 
 	<icon src="./img/114_iPhone-Retina_Web_Clip.png" />
 	
+	<preference name="ios-statusbarstyle" value="black-opaque" />
+	
 	<gap:plugin name="org.apache.cordova.device" />
 	<gap:plugin name="org.apache.cordova.camera" />
 	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
