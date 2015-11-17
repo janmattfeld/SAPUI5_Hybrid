@@ -5,14 +5,10 @@
         versionCode = "10" 
         version     = "1.0.0" >
 
-    <!-- versionCode is optional and Android only -->
-
-	<preference name="phonegap-version" value="3.7.0" />
-
-    <name>SAPUI5 Hybrid</name>
+    <name>abat UI5 Hybrid</name>
 
     <description>
-        An example SAPUI5 Hybrid App.
+        Using Camera, Barcodescanner and Device ID with UI5.
     </description>
 
     <author href="https://www.abat.de" email="jam@abat.de">
@@ -25,9 +21,19 @@
 	<preference name="StatusBarBackgroundColor" value="#009DE0" />
 	<preference name="StatusBarStyle" value="lightcontent" />
 	
-	<gap:plugin name="org.apache.cordova.device" />
-	<gap:plugin name="com.phonegap.plugin.statusbar" />
-	<gap:plugin name="org.apache.cordova.camera" />
-	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+	<gap:plugin name="cordova-plugin-device" version="1.0.1" />
+	<gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
+	<gap:plugin name="cordova-plugin-camera" version="1.2.0" />
+	<gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.2.0" />
+	
+	<access origin="*"/>
+
+	<allow-intent href="http://*/*"/>
+	<allow-intent href="https://*/*"/>
+	<allow-intent href="tel:*"/>
+	<allow-intent href="sms:*"/>
+	<allow-intent href="mailto:*"/>
+	<allow-intent href="geo:*"/>
 	
 </widget>
